@@ -7,7 +7,7 @@
 
 (ns com.franz.util
   "Utility functions."
-  (:use [clojure.contrib stacktrace]))
+  (:use [clojure.stacktrace]))
 
 (alter-meta! *ns* assoc :author "Franz Inc <www.franz.com>, Mike Hinchey <mhinchey@franz.com>")
 

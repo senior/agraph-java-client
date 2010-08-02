@@ -61,7 +61,7 @@
 (defn repositories
   "Returns a seq of AGRepository objects."
   [#^AGCatalog catalog]
-  (seq (.getAllRepositories catalog)))
+  (seq (.listRepositories catalog)))
 
 ;; (def #^{:private true} -access-verbs
 ;;      {:renew AGRepository/RENEW
@@ -163,4 +163,4 @@ Example: (with-agraph [conn {:host \"localhost\" :port 8080
    #^String baseURI
    #^RDFFormat dataFormat
    & contexts]
-  (.add repos-conn data baseURI dataFormat true (resource-array contexts)))
+  (.add repos-conn data baseURI dataFormat (resource-array contexts)))
